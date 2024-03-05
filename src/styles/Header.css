@@ -1,0 +1,8 @@
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 28px;
+  }
