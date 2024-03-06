@@ -8,5 +8,10 @@
   }
 
   header {
-    border: 1px solid red;
+    width: 1440px;
+    height: 68px;
+    padding-left: 16px 180px 16px 180px;
+    border-bottom: 1px solid --orange; /* Assumindo que você queria uma borda inferior */
+    justify-content: space-between; /* Supondo que você queria usar justify-content em um contêiner flexível */
   }
+  
