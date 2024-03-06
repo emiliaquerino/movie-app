@@ -1,12 +1,13 @@
 import React from 'react';
 
 import '../styles/Header.css';
+import Logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header>
       <nav>
-        <div className='logo'>Movie App</div>
+        <img src={Logo} alt="Logo" />
       </nav>
     </header>
   );
