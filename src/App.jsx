@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from './components/Layout';
-import { Routes } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <Layout />
+      < Outlet/>
     </div>
   );
 }

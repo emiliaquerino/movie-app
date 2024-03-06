@@ -5,7 +5,7 @@ import "../styles/Layout.css";
 
 const Layout = () => {
   return (
-    <div className="container">
+    <div>
       <Header />
     </div>
   );
