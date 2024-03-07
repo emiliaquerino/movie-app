@@ -1,0 +1,46 @@
+.movie-card {
+    display: flex;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 175px;
+    height: 263px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 0 20px 20px;
+    flex-grow: 1;
+}
+
+.movie-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-details,
+.btn-watchlist {
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-details {
+    background-color: #ffffff;
+    /*   cor */
+    color: #000000;
+    /*   cor */
+}
+
+.btn-watchlist {
+    background-color: #000000;
+    /*   cor */
+    color: #fff;
+    /*   cor */
+}
