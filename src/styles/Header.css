@@ -1,17 +1,45 @@
-.logo {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: none;
-    color: rgb(156, 15, 15);
-    font-size: 28px;
-  }
+header {
+  border-bottom: 1px solid #FF9800; 
+  /* ver cor */
+  padding: 10px 70px;
+}
 
-  header {
-    width: 1440px;
-    height: 68px;
-    padding-left: 16px 180px 16px 180px;
-    border-bottom: 1px solid --orange; /* Assumindo que você queria uma borda inferior */
-    justify-content: space-between; /* Supondo que você queria usar justify-content em um contêiner flexível */
-  }
-  
+.main {
+  margin: 20px 70px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+}
+
+.links li {
+  margin-left: 10px;
+}
+
+.links li:first-child {
+  margin-left: 0;
+}
+
+.links a {
+  color: white;
+    /* ver cor */
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

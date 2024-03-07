@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/Header.css';
-import '../utils/index.css';
 import Logo from '../assets/logo.png';
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
     <header>
       <nav>
         <img src={Logo} alt="Logo" />
-        <ul>
+        <ul className='links'>
           <li>
             <Link to="/">All Films</Link>
           </li>
