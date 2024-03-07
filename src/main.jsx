@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AllFilmes from './pages/AllFilmes.jsx'
+import AllFilms from './pages/AllFilms.jsx'
 import MyFavorites from './pages/MyFavorites.jsx'
 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <AllFilmes />,
+        element: <AllFilms />,
       },
       {
         path: '/my-favorites',

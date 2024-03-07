@@ -11,7 +11,7 @@ const Header = () => {
         <img src={Logo} alt="Logo" />
         <ul>
           <li>
-            <Link to="/">AllFilmes</Link>
+            <Link to="/">All Films</Link>
           </li>
           <li>
             <Link to="/my-favorites">MyFavorites</Link>
