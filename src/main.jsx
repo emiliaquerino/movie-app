@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AllFilms from './pages/AllFilms.jsx'
-import MyFavorites from './pages/MyFavorites.jsx'
+import MyWatchlists from './pages/MyWatchlists.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         element: <AllFilms />,
       },
       {
-        path: '/my-favorites',
-        element: <MyFavorites />,
+        path: '/my-watchlists',
+        element: <MyWatchlists />,
       },
     ],
   }
