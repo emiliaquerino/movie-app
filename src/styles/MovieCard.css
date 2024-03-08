@@ -32,15 +32,22 @@
 }
 
 .btn-details {
-    background-color: #ffffff;
-    /*   cor */
-    color: #000000;
-    /*   cor */
+    width: 137px;
+    height: 36px;
+    padding: 0px, 16px, 0px, 16px;
+    border-radius: 36px;
+    gap: 16px;
+    
 }
 
 .btn-watchlist {
-    background-color: #000000;
-    /*   cor */
-    color: #fff;
-    /*   cor */
+    width:  235px;
+    height: 36px;
+    padding: 0px, 16px, 0px, 16px;
+    border-radius: 48px;
+    border: 1px;
+    gap: 16px;
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid white;
 }

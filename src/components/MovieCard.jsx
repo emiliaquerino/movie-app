@@ -11,8 +11,8 @@ const MovieCard = ({ movie }) => {
       <div className="movie-info">
         <h1>{movie.Title}</h1>
         <div className="movie-actions">
-          <button className="btn-details">View Details</button>
-          <button className="btn-watchlist">Add to Watchlist</button>
+          <button className="btn-details">VIEW DETAILS</button>
+          <button className="btn-watchlist">REMOVE FROM WATCHLIST</button>
         </div>
       </div>
     </div>
