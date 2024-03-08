@@ -5,9 +5,9 @@
 }
 
 .movie-poster img {
-    width: 175px;
-    height: 263px;
-    object-fit: cover;
+    width: 150px;
+    height: 225px;
+    border-radius: 5px;  
 }
 
 .movie-info {
