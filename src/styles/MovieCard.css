@@ -11,8 +11,9 @@
 }
 
 .movie-info {
-    padding: 0 20px 20px;
-    flex-grow: 1;
+    width: 906px;
+    height: 216px;
+    gap: 13px;
 }
 
 .movie-actions {
