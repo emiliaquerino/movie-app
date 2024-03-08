@@ -5,7 +5,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AllFilms from "./pages/AllFilms.jsx";
 import MyWatchlists from "./pages/MyWatchlists.jsx";
-import MovieProvider  from "./context/MovieContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +25,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <MovieProvider>
       <RouterProvider router={router} />
-    </MovieProvider>
   </React.StrictMode>
 );
