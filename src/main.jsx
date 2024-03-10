@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import MyWatchlists from "./pages/MyWatchlists.jsx";
+import Watchlist from "./pages/WatchList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/my-watchlists",
-        element: <MyWatchlists />,
+        path: "/watchlist",
+        element: <Watchlist />,
       },
     ],
   },

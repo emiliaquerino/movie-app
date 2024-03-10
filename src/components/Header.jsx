@@ -10,10 +10,10 @@ const Header = () => {
         <img src={Logo} alt="Logo" />
         <ul className='links'>
           <li>
-            <Link to="/">All Films</Link>
+            <Link to="/">SEARCH</Link>
           </li>
           <li>
-            <Link to="/my-watchlists">My Watchlists</Link>
+            <Link to="/watchlist">WATCHLIST</Link>
           </li>
         </ul>
       </nav>

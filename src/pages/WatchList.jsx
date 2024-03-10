@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import "../styles/MyWatchlists.css";
 
-const MyWatchlists = () => {
+const Watchlist = () => {
   //const
 
   return (
@@ -11,4 +10,4 @@ const MyWatchlists = () => {
   );
 };
 
-export default MyWatchlists;
+export default Watchlist;
