@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AllFilms from "./pages/AllFilms.jsx";
+import Home from "./pages/Home.jsx";
 import MyWatchlists from "./pages/MyWatchlists.jsx";
 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <AllFilms />,
+        element: <Home />,
       },
       {
         path: "/my-watchlists",

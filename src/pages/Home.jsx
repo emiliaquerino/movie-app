@@ -1,14 +1,42 @@
-import React, { useContext } from "react";
-import "../styles/MyWatchlists.css";
+import React, { useState, useEffect } from "react";
+import "../styles/Home.css";
+import MovieCard from "../components/MovieCard";
+import axios from "axios";
+
+const API_KEY = "7fcdcab";
 
 const Home = () => {
-  //const
+  const [movies, setMovies] = useState([]);
+  const [totalResults, setTotalResults] = useState(0);
+
+  const fetchMovies = async () => {
+    try {
+      const response = await axios.get(
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=harry`
+      );
+      const data = response.data;
+      setMovies(data.Search || []);
+      setTotalResults(data.totalResults);
+    } catch (error) {
+      console.error("Erro ao buscar filmes:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
   return (
     <div>
-        <h1>What would you like to watch?</h1>
+      <h1>All Films ({totalResults})</h1>
+      <div className="movies">
+        {movies.map((movie) => (
+          <MovieCard key={movie.imdbID} movie={movie} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Home;
+
