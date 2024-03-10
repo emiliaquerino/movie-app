@@ -6,37 +6,36 @@ import axios from "axios";
 const API_KEY = "7fcdcab";
 
 const Home = () => {
-  const [movies, setMovies] = useState([]);
-  const [totalResults, setTotalResults] = useState(0);
+  const [movie, setMovie] = useState();
 
-  const fetchMovies = async () => {
+  const SearchMovie = async (title) => {
     try {
       const response = await axios.get(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&s=harry`
+        `https://www.omdbapi.com/?apikey=${API_KEY}&t=${title}`
       );
       const data = response.data;
-      setMovies(data.Search || []);
-      setTotalResults(data.totalResults);
+      if ("Title" in data) {
+        setMovie(data);
+      }else{
+        setMovie(null);
+      }
+      
     } catch (error) {
       console.error("Erro ao buscar filmes:", error);
     }
   };
 
-  useEffect(() => {
-    fetchMovies();
-  }, []);
-
   return (
     <div>
-      <h1>All Films ({totalResults})</h1>
+      <h1>What would you like to watch?</h1>
+      <input placeholder="Enter a movie title" onChange={(e) => SearchMovie(e.target.value)}/>
+        
+
       <div className="movies">
-        {movies.map((movie) => (
-          <MovieCard key={movie.imdbID} movie={movie} />
-        ))}
+        {movie && <MovieCard movie={movie} />}
       </div>
     </div>
   );
 };
 
 export default Home;
-
