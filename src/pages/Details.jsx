@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import MovieCard from '../components/MovieCard';
+import MovieCardDetails from '../components/MovieCardDetails';
 import axios from 'axios';
 
 const API_KEY = "7fcdcab";
@@ -28,7 +28,7 @@ function Details() {
   
     return (
       <div className="movies">
-        {movie && <MovieCard movie={movie} />}
+        {movie && <MovieCardDetails movie={movie} />}
       </div>
     );
   }
