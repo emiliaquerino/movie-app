@@ -1,6 +1,6 @@
 import React from "react";
-
 import "../styles/MovieCard.css";
+import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -11,7 +11,9 @@ const MovieCard = ({ movie }) => {
       <div className="movie-info">
         <h1>{movie.Title}</h1>
         <div className="movie-actions">
-          <button className="btn-details">VIEW DETAILS</button>
+        <Link to={`details/${movie.imdbID}`} className="btn-black">
+          VIEW DETAILS
+        </Link>
           <button className="btn-watchlist">REMOVE FROM WATCHLIST</button>
         </div>
       </div>
