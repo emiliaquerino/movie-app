@@ -1,39 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import MovieCard from "../components/MovieCard";
+import SearchInput from "../components/SearchInput";
 import axios from "axios";
 
 const API_KEY = "7fcdcab";
 
 const Home = () => {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState(null);
+  const [inputValue, setInputValue] = useState("");
 
-  const SearchMovie = async (title) => {
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const searchMovie = async () => {
+    if (!inputValue) {
+      setMovie(null);
+      return;
+    }
+
     try {
-      const response = await axios.get(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&t=${title}`
+      const { data } = await axios.get(
+        `https://www.omdbapi.com/?apikey=${API_KEY}&t=${inputValue}`
       );
-      const data = response.data;
-      if ("Title" in data) {
+      if (data.Response === "True") {
         setMovie(data);
-      }else{
+      } else {
         setMovie(null);
       }
-      
     } catch (error) {
-      console.error("Erro ao buscar filmes:", error);
+      console.error("Error searching movie:", error);
     }
   };
 
   return (
     <div>
       <h1>What would you like to watch?</h1>
-      <input placeholder="Enter a movie title" onChange={(e) => SearchMovie(e.target.value)}/>
-        
-
-      <div className="movies">
-        {movie && <MovieCard movie={movie} />}
-      </div>
+      <SearchInput
+        handleInputChange={handleInputChange}
+        handleSubmit={searchMovie}
+      />
+      <div className="movies">{movie && <MovieCard movie={movie} />}</div>
     </div>
   );
 };

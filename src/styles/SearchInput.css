@@ -1,0 +1,17 @@
+.search-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  padding-right: 30px;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
