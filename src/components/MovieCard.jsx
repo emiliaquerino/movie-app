@@ -1,6 +1,9 @@
-import React from "react";
-import "../styles/MovieCard.css";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import FavoriteMovie from "./FavoriteMovie";
+import ImdbLogo from "../assets/imdb-logo-home.png";
+
+import "../styles/MovieCard.css";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -10,11 +13,18 @@ const MovieCard = ({ movie }) => {
       </div>
       <div className="movie-info">
         <h1>{movie.Title}</h1>
+        <div className="movie-metadata">
+          <span className="movie-genre">{movie.Genre}</span>
+          <span className="movie-rating">
+            <img src={ImdbLogo} alt="imdb logo" /> {movie.imdbRating}
+          </span>
+        </div>
+        <p className="movie-description">{movie.Plot}</p>
         <div className="movie-actions">
-        <Link to={`details/${movie.imdbID}`} className="btn-black">
-          VIEW DETAILS
-        </Link>
-          <button className="btn-watchlist">REMOVE FROM WATCHLIST</button>
+          <FavoriteMovie movie={movie} />
+          <Link to={`details/${movie.imdbID}`} className="btn-black">
+            VIEW DETAILS
+          </Link>
         </div>
       </div>
     </div>
