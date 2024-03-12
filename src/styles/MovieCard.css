@@ -12,6 +12,9 @@
 }
 
 .movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   width: 906px;
   height: 216px;
   margin-left: 25px;
