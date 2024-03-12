@@ -17,6 +17,13 @@
   --dark-gray: hsla(0, 0%, 49%, 1);
 }
 
+.main {
+  margin: 50px 123px 180px;
+}
+
+
+
+
 a {
   /* font-weight: 500;
   color: #646cff;

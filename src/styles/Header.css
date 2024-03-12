@@ -4,10 +4,6 @@ header {
   padding: 10px 70px;
 }
 
-.main {
-  margin: 20px 70px;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -23,6 +19,7 @@ nav {
 .links {
   list-style-type: none;
   display: flex;
+  margin-right: 45px;
 }
 
 .links li {
@@ -42,4 +39,8 @@ nav {
 
 .links a:hover {
   text-decoration: underline;
+}
+
+img {
+  margin-left: 40px;
 }
