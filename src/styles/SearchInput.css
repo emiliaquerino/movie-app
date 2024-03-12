@@ -4,6 +4,8 @@
   width: 100%;
   border: 1px solid var(--dark-gray);
   border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .search-input {
@@ -13,6 +15,7 @@
   border: none;
   font-size: 14px;
   border-radius: 10px;
+  color: var(--text);
 }
 
 .search-btn {
