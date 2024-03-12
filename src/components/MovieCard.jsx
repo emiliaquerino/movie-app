@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import FavoriteMovie from "./FavoriteMovie";
 import ImdbLogo from "../assets/imdb-logo-home.png";
+import StarIcon from "../assets/star-icon.png";
+
 
 import "../styles/MovieCard.css";
 
@@ -17,6 +19,7 @@ const MovieCard = ({ movie }) => {
           <span className="movie-genre">{movie.Genre}</span>
           <span className="movie-rating">
             <img src={ImdbLogo} alt="imdb logo" /> {movie.imdbRating}
+            <img src={StarIcon} alt="star icon" />
           </span>
         </div>
         <p className="movie-description">{movie.Plot}</p>
