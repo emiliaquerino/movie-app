@@ -1,16 +1,20 @@
 import React from 'react';
 import Layout from './components/Layout';
 import { Outlet } from 'react-router-dom';
+import { MovieProvider } from './context/MovieContext';
 
 function App() {
   return (
-    <div className='container'>
-      <Layout />
-      <div className='main'>
-        < Outlet/>
+    <MovieProvider>
+      <div className='container'>
+        <Layout />
+        <div className='main'>
+          < Outlet/>
+        </div>
       </div>
-    </div>
+    </MovieProvider>
   );
 }
 
 export default App;
+
