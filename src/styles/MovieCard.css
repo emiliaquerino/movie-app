@@ -38,9 +38,16 @@
   margin-right: 10px;
 }
 
-/* .movie-rating {
-  margin: 0px;
-} */
+.genre-button {
+  background-color: var(--background);
+  color: gray;
+  border-color: gray;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-right: 3px;
+  padding: 4px;
+}
+
 
 .movie-rating {
   display: flex;
