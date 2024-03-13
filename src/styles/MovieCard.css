@@ -38,9 +38,24 @@
   margin-right: 10px;
 }
 
+/* .movie-rating {
+  margin: 0px;
+} */
+
 .movie-rating {
   display: flex;
   align-items: center;
+  padding: 3px;
+}
+
+.movie-rating img {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.star img {
+  margin: 0px;
+  padding: 2px;
 }
 
 .fa-imdb {
