@@ -27,7 +27,7 @@
 }
 
 .movie-metadata {
-  display: flex;
+  display: block;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -51,6 +51,8 @@
 .movie-rating img {
   margin-right: 0;
   margin-left: 0;
+  padding: 0;
+  padding-right: 6px;
 }
 
 .star img {

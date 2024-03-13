@@ -40,12 +40,12 @@
 
 // export default MovieCard;
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FavoriteMovie from './FavoriteMovie';
-import ImdbLogo from '../assets/imdb-logo-home.png';
-import StarIcon from '../assets/star-icon.png';
-import '../styles/MovieCard.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import FavoriteMovie from "./FavoriteMovie";
+import ImdbLogo from "../assets/imdb-logo-home.png";
+import StarIcon from "../assets/star-icon.png";
+import "../styles/MovieCard.css";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -57,7 +57,7 @@ const MovieCard = ({ movie }) => {
         <h2>{movie.Title}</h2>
         <div className="movie-metadata">
           <div className="movie-genres">
-            {movie.Genre.split(', ').map((genre, index) => (
+            {movie.Genre.split(", ").map((genre, index) => (
               <button key={index} className="genre-button">
                 {genre}
               </button>
@@ -67,7 +67,7 @@ const MovieCard = ({ movie }) => {
             <img src={ImdbLogo} alt="imdb logo" />
             <span>{movie.imdbRating}</span>
             <div className="star">
-              <img src={StarIcon} alt="star icon"/>
+              <img src={StarIcon} alt="star icon" />
             </div>
           </div>
         </div>
