@@ -6,7 +6,7 @@ const FilterMovieByGenre = ({ onGenreChange }) => {
   return (
     <div>
       <select onChange={(e) => onGenreChange(e.target.value)} defaultValue="">
-        <option value="">Todos os Gêneros</option>
+        <option value="">GENRE</option>
         {genres.map(genre => (
           <option key={genre} value={genre}>{genre}</option>
         ))}

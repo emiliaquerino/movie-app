@@ -32,8 +32,10 @@ const WatchList = () => {
   return (
     <div>
       <h1>Watchlist ({sortedMovies.length})</h1>
-      <SortMoviesByImdb sortOrder={sortOrder} onSortChange={setSortOrder} />
-      <FilterMovieByGenre onGenreChange={setSelectedGenre} />
+      <div className="filters">
+        <SortMoviesByImdb sortOrder={sortOrder} onSortChange={setSortOrder} />
+        <FilterMovieByGenre onGenreChange={setSelectedGenre} />
+      </div>
       <div className="movies">
         {currentMovies.length > 0 ? (
           currentMovies.map(movie => <MovieCard key={movie.imdbID} movie={movie} />)
