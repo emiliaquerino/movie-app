@@ -12,14 +12,22 @@ const MovieCardDetails = ({ movie }) => {
       <div className="movie-info">
         <h1>{movie.Title}</h1>
         <div className="movie-metadata">
-          <span className="movie-genre">{movie.Genre}</span>
+          <span className="movie-genre">
+            {movie.Genre.split(", ").map((genre, index) => (
+              <button key={index} className="genre-button">
+                {genre}
+              </button>
+            ))}
+          </span>
           <span className="movie-rating">
-          <img src={ImdbLogo} alt="imdb logo" /> {movie.imdbRating}
+            <img src={ImdbLogo} alt="imdb logo" /> {movie.imdbRating}
           </span>
         </div>
         <p className="movie-description">{movie.Plot}</p>
+        <p>Director: {movie.Director}</p>
+        <p>Cast: {movie.Actors}</p>
         <div className="movie-actions">
-        <FavoriteMovie movie={movie} />
+          <FavoriteMovie movie={movie} />
         </div>
       </div>
     </div>
