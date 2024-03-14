@@ -1,6 +1,5 @@
 .movie-card {
   display: flex;
-  overflow: hidden;
 }
 
 .movie-poster img {

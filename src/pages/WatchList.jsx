@@ -33,7 +33,7 @@ const WatchList = () => {
     <div>
       <h1>Watchlist ({sortedMovies.length})</h1>
       <div className="filters">
-        <SortMoviesByImdb sortOrder={sortOrder} onSortChange={setSortOrder} />
+        <SortMoviesByImdb onSortChange={setSortOrder} />
         <FilterMovieByGenre onGenreChange={setSelectedGenre} />
       </div>
       <div className="movies">
